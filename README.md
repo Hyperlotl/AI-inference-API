@@ -3,7 +3,7 @@ This is a scratch extension that allows you to connect to AI inference providers
 So yeah... its just my turbo-chatbot extension but like, a thousand times better
 # Basics:
 Refer to this image for the most basic setup (uses JSON extension)
-![image](https://github.com/Hyperlotl/AI-inference-API/blob/5c224fe157dd0fc68f87869947906df20b185753/example.png)
+<img width="1201" height="833" alt="image" src="https://github.com/user-attachments/assets/c0b46fc9-9568-483e-8688-110189cc941a" />
 
 
 
