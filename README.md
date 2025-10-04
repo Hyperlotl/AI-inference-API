@@ -4,7 +4,7 @@ So yeah... its just my turbo-chatbot extension but like, a thousand times better
 # Basics:
 Refer to this image for the most basic setup (uses JSON extension)
 
-![Example Blocks](https://github.com/Hyperlotl/AI-inference-API/blob/42bcc67e55be359cdc462823b3dba4af1be6f0dc/example-blocks.svg)
+![Example Blocks](https://github.com/Hyperlotl/AI-inference-API/blob/7e837cf83391d1b5399e420a6f0d94207c5d770d/example.png)
 
 
 
