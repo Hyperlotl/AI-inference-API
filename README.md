@@ -3,17 +3,8 @@ This is a scratch extension that allows you to connect to AI inference providers
 So yeah... its just my turbo-chatbot extension but like, a thousand times better
 # Basics:
 Refer to this image for the most basic setup (uses JSON extension)
+![image](https://github.com/Hyperlotl/AI-inference-API/blob/5c224fe157dd0fc68f87869947906df20b185753/example.png)
 
-<script src="https://scratchblocks.github.io/dist/scratchblocks-v3.js"></script>
-<pre class="scratchblocks">
-when green flag clicked
-repeat 10
-  move 10 steps
-end
-</pre>
-<script>
-  scratchblocks.renderMatching();
-</script>
 
 
 
