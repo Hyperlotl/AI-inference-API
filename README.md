@@ -4,7 +4,8 @@ So yeah... its just my turbo-chatbot extension but like, a thousand times better
 # Basics:
 Refer to this image for the most basic setup (uses JSON extension)
 
-![Example Blocks](https://raw.githubusercontent.com/Hyperlotl/AI-inference-API/main/example-blocks.svg)
+![Example Blocks](https://raw.githubusercontent.com/Hyperlotl/AI-inference-API/91bf4598e94e009717bddd9360b5fd751addbc6f/example-blocks.svg)
+
 
 
 Note: you can get your API key from API.cerebras.ai. As a precaution, you SHOULD encrypt this key when publishing it
