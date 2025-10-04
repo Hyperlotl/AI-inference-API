@@ -4,7 +4,16 @@ So yeah... its just my turbo-chatbot extension but like, a thousand times better
 # Basics:
 Refer to this image for the most basic setup (uses JSON extension)
 
-![Example Blocks](https://github.com/Hyperlotl/AI-inference-API/blob/7e837cf83391d1b5399e420a6f0d94207c5d770d/example.png)
+<script src="https://scratchblocks.github.io/dist/scratchblocks-v3.js"></script>
+<pre class="scratchblocks">
+when green flag clicked
+repeat 10
+  move 10 steps
+end
+</pre>
+<script>
+  scratchblocks.renderMatching();
+</script>
 
 
 
