@@ -21,7 +21,7 @@
     resetMessages();
     let API_KEY = null;
     let AIargs = {
-        "model": "llama-3.3-70b",
+        "model": "qwen-3-235b-a22b-instruct-2507",
         "max_completion_tokens": 2000,
         "temperature": 0.7,
         "top_p": 0.8
@@ -78,7 +78,9 @@
                         blockType: Scratch.BlockType.EVENT,
                         opcode: 'whenAIResponds',
                         text: 'When response received from AI',
-                        isEdgeActivated: false // required boilerplate
+                        isEdgeActivated: false, // required boilerplate
+                        shouldRestartExistingThreads: true,
+
                     },
 //sends a message to the AI and adds the response to messages
                     {
