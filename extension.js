@@ -1,10 +1,27 @@
 (function(Scratch) {
+    let messages = [];
+    function resetMessages() {
+        messages = [];
+        messages = new Proxy(messages, {
+        set(target, prop, value) {
+            target[prop] = value;
+            if (!isNaN(prop)) { 
+            // new array item was added
+            const last_role=target[target.length - 1].role;
+            if (last_role == "assistant") {
+                Scratch.vm.runtime.startHats('aiutils_whenAIResponds');
+            }
+            }
+            return true;
+        }
+        }); 
+    };
     'use strict';
     let provider = 'cerebras.ai'
-    let messages = [];
+    resetMessages();
     let API_KEY = null;
     let AIargs = {
-        "model": "qwen-3-235b-a22b-instruct-2507",
+        "model": "llama-3.3-70b",
         "max_completion_tokens": 2000,
         "temperature": 0.7,
         "top_p": 0.8
@@ -56,6 +73,12 @@
                         arguments: {
                             CONTENT: { type: Scratch.ArgumentType.STRING, defaultValue: '' }
                         }
+                    },
+                    {
+                        blockType: Scratch.BlockType.EVENT,
+                        opcode: 'whenAIResponds',
+                        text: 'When response received from AI',
+                        isEdgeActivated: false // required boilerplate
                     },
 //sends a message to the AI and adds the response to messages
                     {
@@ -189,7 +212,7 @@
         }
 
         deleteall() {
-            messages = [];
+            resetMessages();
         }
 
         // Return a simple message object (debug)
@@ -218,6 +241,7 @@
         setProvider(args) {
             provider = args.PROVIDER
         }
+
 
 
     }
