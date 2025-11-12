@@ -6,7 +6,6 @@
         set(target, prop, value) {
             target[prop] = value;
             if (!isNaN(prop)) { 
-            // new array item was added
             const last_role=target[target.length - 1].role;
             if (last_role == "assistant") {
                 Scratch.vm.runtime.startHats('aiutils_whenAIResponds');
