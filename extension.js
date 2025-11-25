@@ -239,7 +239,7 @@
             const messageItems = messages.map(obj => obj[messageType]);
             return JSON.stringify(messageItems);
         }
-        LatestMessageInfo(args) {
+        latestMessageInfo(args) {
             const messageType = args.TYPE; // 'role' or 'content'
             return messages[messages.length - 1][messageType]
         }
