@@ -6,7 +6,9 @@
         set(target, prop, value) {
             target[prop] = value;
             if (!isNaN(prop)) { 
+            // new array item was added
             const last_role=target[target.length - 1].role;
+            console.log(`last role was: ${last_role}`)
             if (last_role == "assistant") {
                 Scratch.vm.runtime.startHats('aiutils_whenAIResponds');
             }
@@ -44,6 +46,16 @@
                         opcode: 'messagesInfo',
                         blockType: Scratch.BlockType.REPORTER,
                         text: '[TYPE] of all messages',
+                        disableMonitor: true,
+                        arguments: {
+                            TYPE: { type: Scratch.ArgumentType.STRING, menu: 'TYPES' }
+                        }
+                    },
+//get the role/content of latest messages
+                    {
+                        opcode: 'latestMessageInfo',
+                        blockType: Scratch.BlockType.REPORTER,
+                        text: '[TYPE] of last message',
                         disableMonitor: true,
                         arguments: {
                             TYPE: { type: Scratch.ArgumentType.STRING, menu: 'TYPES' }
@@ -226,6 +238,10 @@
             const messageType = args.TYPE; // 'role' or 'content'
             const messageItems = messages.map(obj => obj[messageType]);
             return JSON.stringify(messageItems);
+        }
+        LatestMessageInfo(args) {
+            const messageType = args.TYPE; // 'role' or 'content'
+            return messages[messages.length - 1][messageType]
         }
 
         setConfig(args) {
